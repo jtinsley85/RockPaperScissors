@@ -12,30 +12,48 @@
 </header>
 <body>
     <main>
-        <section class="score-board">
-            <div id="user-label" class="badge">user</div>
-            <div id="computer-label" class="badge">comp</div>
-            <span id="user-score">0</span>:<span id="computer-score">0</span>
+        <section class="scores">
+            <section class="score-board">
+                <div id="user-label" class="badge">USER</div>
+                <div id="computer-label" class="badge">COMP</div>
+                <span id="user-score">0</span>:<span id="computer-score">0</span>
+            </section>
         </section>
-        <section class="result">
-            <p>Paper covers rock. You Win!</p>
-        </section>
-        <section class="choices">
-            <div class="choice" id="rock">
-                <img src="images/rock_mickey.png" alt="Hand showing rock">
-            </div>
-            <div class="choice" id="paper">
+        <section class="game-play">
+            <section class="action-message">
+                <p id="message">Make Your Move!</p>
+            </section>
+            <section class="choices">
+                <div id="rock" class="choice">
+                    <img src="images/rock_mickey.png" alt="Hand showing rock">
+                </div>
+                <div id="paper" class="choice">
                     <img src="images/paper_mickey.png" alt="Hand showing paper">
-            </div>
-            <div class="choice" id="scissors">
+                </div>
+                <div id="scissors" class="choice">
                     <img src="images/scissors_mickey.png" alt="Hand showing scissors">
-            </div>
+                </div>
+            </section>
         </section>
-        <section class="action-message">
-            <p id="message">Make Your Move.</p>
+        <section class="results">
+            <section class="results-message">
+                <p class="">Paper covers rock. You Win!</p>
+            </section>
+            <section class="selections">
+                <section class="selection-imgs">  
+                    <div id="user-selection-img" class="selection-img ">
+                        <div id="user-selection-label" class="selection-labels ">USER</div>
+                        <img id="user-choice-img" src="images/scissors_mickey.png" alt="">
+                    </div>
+                    
+                    <div id="comp-selection-img" class="selection-img ">
+                        <div id="comp-selection-label" class="selection-labels ">COMP</div>
+                        <img id="comp-choice-img" src="images/scissors_mickey.png" alt="">
+                    </div>
+                </section>
+            </section>
         </section>
     </main>
-    
     <script src="app.js"></script>
 </body>
 </html>
