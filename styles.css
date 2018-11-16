@@ -18,8 +18,9 @@ header {
 
 header > h1 {
     color: #25272E;
-    text-align: left;
+    text-align: center;
     font-size: 35px;
+    /* border: 4px solid black;        TESTING */
 }
 
 .scores {
@@ -95,7 +96,7 @@ header > h1 {
 
 .choice > img {
     height: 5em;
-    width: 5em;
+    width: 5em; 
 }
 
 .choice:hover {
@@ -109,7 +110,11 @@ header > h1 {
     text-align: center;
     /* border: 4px solid white; */
     width: 80%;
-    position: relative;  
+    position: relative; 
+    opacity: 0;
+}
+.results.opacity1 {
+    opacity: 1;
 }
 
 .results-message {
@@ -134,7 +139,6 @@ header > h1 {
     position: relative;
     display: block;
 }
-
 
 .selection-img {
     margin: 10px;
@@ -182,37 +186,42 @@ header > h1 {
     margin: 0;
 }
 
-.opacity0 {
-    opacity: 0;
-}
-
-/* ANIMATION */
-
-.showResultMsg {
-    animation: opacity1 0.7s ease-in-out 4s 1 normal forwards;
-}
-
-.showUserLabel {
-    animation: opacity1 0.7s ease-in-out 0s 1 normal forwards;
-}
-
-.showUserImg {
-    animation: showAndGrow 0.7s ease-in-out 0s 1 normal forwards;
-}
-
-.showCompLabel {
-    animation: opacity1 0.7s ease-in-out 2.5s 1 normal forwards;
-}
-
-.showCompImg {
-    animation: showAndGrow 0.7s ease-in-out 2.5s 1 normal forwards;
-}
-
 .winnerBorder {
     animation: winner 0.7s ease-in-out 2s 1 normal forwards;
 }
 
+@keyframes winner {
+    0% {
+        border: 2px solid white;
+    }
+    25%, 50% {
+        border: 4px solid green;
+    }
+    100% {
+        border: 2px solid white;
+    }
+}
 
+
+
+
+.btnClicked {
+    animation: choiceBtn 100ms ease-out 0s 1 normal; 
+}
+
+@keyframes choiceBtn {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 @keyframes showAndGrow {
     0% {
@@ -234,17 +243,7 @@ header > h1 {
     }
 }
 
-@keyframes winner {
-    0% {
-        border: 2px solid white;
-    }
-    25%, 50% {
-        border: 4px solid green;
-    }
-    100% {
-        border: 2px solid white;
-    }
-}
+
 
 
 
