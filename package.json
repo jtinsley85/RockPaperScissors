@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server --c bs-chrome.json",
-    "babel": "babel --presets env app.js -o build/app.bundle.js"
+    "babel": "babel --presets env src/app.js -o dist/DEV/app.bundle.js",
+    "build": "babel dist/DEV -d dist/PROD"
   },
   "author": "Josh Tinsley",
   "license": "ISC",
